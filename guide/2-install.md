@@ -10,8 +10,6 @@
 - [Drivers]() FILE NEEDED
   
 - [Msc script]() FILE NEEDED
-
-- [Parted]() FILE NEEDED
   
 - [TWRP]() FILE NEEDED (should already be installed)
 
