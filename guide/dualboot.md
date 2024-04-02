@@ -9,7 +9,7 @@
 
 - [UEFI image]() FILE NEEDED
 
-- [WOA Helper app](https://github.com/n00b69/woa-beryllium/releases/download/Dualboot/woahelper.apk)
+- [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/blob/main/woahelper.apk)
 
 - [Switch To Android package]() FILE NEEDED
 
