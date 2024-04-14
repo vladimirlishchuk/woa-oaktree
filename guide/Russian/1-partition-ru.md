@@ -1,6 +1,6 @@
 <img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
 
-# Запуск Winows на Xiaomi Mi 8
+# Запуск Winows на DEVICENAME
 
 ## Разметка устройства 
 
@@ -9,9 +9,9 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
   
-- [TWRP](https://github.com/n00b69/woa-dipper/releases/download/Files/twrp.img)
+- [TWRP]() FILE NEEDED
 
-- [Parted](https://github.com/n00b69/woa-dipper/releases/download/Files/parted)
+- [Parted]() FILE NEEDED
 
 ### Заметки 
 > [!WARNING]  
@@ -70,19 +70,19 @@ mkpart userdata ext4 1611MB 32GB
 ```
 
 #### Создать раздел ESP
-> Замените **32.16GB** с конечным значением **userdata**
+> Замените **32GB** с конечным значением **userdata**
 >
-> Замените **32.66GB** тем значением, которое вы использовали ранее, добавив к нему **0,5 GB**
+> Замените **32.1GB** тем значением, которое вы использовали ранее, добавив к нему **0.1 GB**
 ```cmd
-mkpart esp fat32 32.16GB 32.66GB
+mkpart esp fat32 32GB 32.1GB
 ```
 
 #### Создать раздел Windows
-> Замените **32.66GB** с конечным значением **esp**
+> Замените **32.1GB** с конечным значением **esp**
 >
 > Замените **123GB** на конечное значение вашего диска, используйте `p free`, чтобы найти его
 ```cmd
-mkpart win ntfs 32.66GB 123GB
+mkpart win ntfs 32.1GB 123GB
 ```
 
 #### Сделать ESP загрузочным
