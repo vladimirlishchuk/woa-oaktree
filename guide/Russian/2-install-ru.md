@@ -1,22 +1,20 @@
 <img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
 
-# Запуск Winows на Xiaomi Mi 8
+# Запуск Winows на DEVICENAME
 
 ## Установка Windows
 
 ### Требования
 - [ARM образ Windows](https://worproject.com/esd)
   
-- [Драйвера](https://github.com/n00b69/woa-dipper/releases/tag/Drivers)
-
-- [Devcfg исправления touch](https://github.com/n00b69/woa-dipper/releases/download/Files/devcfg-polaris.img)
+- [Драйвера]() FILE NEEDED
   
-- [Образ UEFI](https://github.com/n00b69/woa-dipper/releases/tag/UEFI)
+- [Образ UEFI]() FILE NEEDED
 
 ### Загрузка в UEFI
-> Замените **<путь\к\dipper-uefi.img>** с актуальным путём к образу UEFI
+> Замените **<путь\к\DEVICENAME-uefi.img>** с актуальным путём к образу UEFI
 ```cmd
-fastboot boot <путь\к\dipper-uefi.img>
+fastboot boot <путь\к\DEVICENAME-uefi.img>
 ```
 
 #### Включение режима mass storage
@@ -51,14 +49,14 @@ lis par
 ```
 
 #### Выбрать раздел Windows 
-> Замените `$` номером раздела Windows (должен быть 23)
+> Замените `$` номером раздела Windows (должен быть XX)
 ```cmd
 sel par $
 ```
 
 #### Отформатировать раздел Windows
 ```cmd
-format quick fs=ntfs label="WINDIPPER"
+format quick fs=ntfs label="WIN"
 ```
 
 #### Добавить букву к разделу Windows
@@ -67,14 +65,14 @@ assign letter X
 ```
 
 #### Выбhfnm раздел ESP
-> Замените `$` номером раздела ESP (должен быть 22)
+> Замените `$` номером раздела ESP (должен быть XX)
 ```cmd
 sel par $
 ```
 
 #### Отформатировать раздел ESP
 ```cmd
-format quick fs=fat32 label="ESPDIPPER"
+format quick fs=fat32 label="ESP"
 ```
 
 #### Добавьте букву к ESP
@@ -128,7 +126,7 @@ diskpart
 ```
 
 #### Выбрать раздел Windows телефона
-> Используйте `list volume` чтобы найти его, замените `$` номером **WINDIPPER**
+> Используйте `list volume` чтобы найти его, замените `$` номером **WIN**
 ```diskpart
 select volume $
 ```
@@ -139,7 +137,7 @@ remove letter x
 ```
 
 #### Выбрать раздел ESP телефна
-> Используйте `list volume` чтобы найти его, замените `$` номером **ESPDIPPER**
+> Используйте `list volume` чтобы найти его, замените `$` номером **ESP**
 ```diskpart
 select volume $
 ```
@@ -152,12 +150,6 @@ remove letter y
 #### Выйти из diskpart
 ```diskpart
 exit
-```
-
-### Исправить touch
-> Перезагрузитесь в fastboot, затем замените **path\to** путём к образу
-```cmd
-fastboot flash devcfg_ab path\to\devcgf-dipper.img
 ```
 
 ### Перезагрузка в Android
