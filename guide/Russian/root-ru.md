@@ -1,6 +1,6 @@
 <img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
 
-# Запуск Winows на Xiaomi Mi 8
+# Запуск Winows на DEVICENAME
 
 ## Root guide
 
@@ -9,7 +9,7 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [TWRP](https://github.com/n00b69/woa-beryllium/releases/download/Files/twrp.img)
+- [TWRP]() FILE NEEDED
 
 ### Запустите TWRP
 > Если ваше recovery было заменено на стандартное, прошейте его ещё раз в fastboot с помощью:
