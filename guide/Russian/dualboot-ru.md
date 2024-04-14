@@ -1,17 +1,17 @@
 <img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
 
-# Запуск Winows на Xiaomi Mi 8
+# Запуск Winows на DEVICENAME
 
 ## Dualboot guide
 
 ### Требования
 - [Magisk](https://github.com/topjohnwu/Magisk/releases/latest)
 
-- [Образ UEFI](https://github.com/n00b69/woa-dipper/releases/tag/UEFI)
+- [Образ UEFI]() FILE NEEDED
 
 - [Приложение WOA Helper](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA)
 
-- [Switch To Android пакет](https://github.com/n00b69/woa-dipper/releases/download/Files/polaris-sta.zip)
+- [Switch To Android пакет]() FILE NEEDED
 
 ## Руководство по двойной загрузке
 В этом руководстве предполагается, что у вас есть root-права, если это не так, пожалуйста, сначала следуйте [этому руководству](root-ru.md).
