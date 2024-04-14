@@ -1,20 +1,20 @@
 <img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
 
-# Запуск Winows на Xiaomi Mi 8
+# Запуск Winows на DEVICENAME
 
 ## Обновление драйверов 
 
 ### Требования
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
   
-- [Драйвера](https://github.com/n00b69/woa-dipper/releases/tag/Drivers)
+- [Драйвера]() FILE NEEDED
   
-- [Образ UEFI](https://github.com/n00b69/woa-dipper/releases/tag/UEFI)
+- [Образ UEFI]() FILE NEEDED
 
 ### Запуск UEFI
-> Замените **<путь\к\dipper-uefi.img>** путём к образу UEFI 
+> Замените **<путь\к\DEVICENAME-uefi.img>** путём к образу UEFI 
 ```cmd
-fastboot boot <путь\к\dipper-uefi.img>
+fastboot boot <путь\к\DEVICENAME-uefi.img>
 ```
 
 #### Включение режима mass storage 
@@ -47,12 +47,12 @@ lis par
 ```
 
 #### Выбрать раздел Windows 
-> Замените `$` номером раздела Windows (должен быть 23)
+  > Замените `$` номером раздела Windows (должен быть XX)
 ```cmd
 sel par $
 ```
 
-#### Привязать букву к WINDIPPER
+#### Привязать букву к WIN
 ```cmd
 assign letter X
 ```
