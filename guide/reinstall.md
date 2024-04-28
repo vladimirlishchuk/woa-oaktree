@@ -2,6 +2,8 @@
 
 # Running Windows on the DEVICENAME
 
+## Reinstalling Windows
+
 ### Prerequisites
 - [Windows on ARM image](https://worproject.com/esd)
 
