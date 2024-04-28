@@ -1,6 +1,6 @@
 <img align="right" src="https://github.com/n00b69/woa-equuleus/blob/main/equuleus.png" width="350" alt="Windows 11 running on equuleus">
 
-# Windows na Xiaomi Mi 8 Pro
+# Windows na DEVICENAME
 
 ## Tworzenie partycji
 
@@ -9,9 +9,9 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
   
-- [TWRP](https://github.com/n00b69/woa-equuleus/releases/download/Files/twrp.img)
+- [TWRP](https://github.com/n00b69/woa-DEVICENAME/releases/download/Files/twrp.img)
 
-- [Parted](https://github.com/n00b69/woa-equuleus/releases/download/Files/parted)
+- [Parted](https://github.com/n00b69/woa-DEVICENAME/releases/download/Files/parted)
 
 ### Notes
 > [!Warning]  
@@ -37,7 +37,7 @@ Użyj TWRP teraz, aby wykonać kopię zapasową modemu i partycji EFS (a także 
 > **JEŚLI KONTYNUUJESZ BEZ KOPII ZAPASOWEJ MODEMU I EFS JEST DUŻE RYZYKO ZE TELEFON NIE BĘDZIE MOGŁ UŻYWAĆ LTE LUB POŁĄCZEŃ**
 
 ### Przewodnik dotyczący partycjonowania
-> Twój Xiaomi Mi 8 Pro może mieć różne rozmiary pamięci. Ten przewodnik używa wartości modelu 128GB jako przykładu. W razie potrzeby przewodnik wspomni, czy można lub należy użyć innych wartości.
+> Twój DEVICENAME może mieć różne rozmiary pamięci. Ten przewodnik używa wartości modelu 128GB jako przykładu. W razie potrzeby przewodnik wspomni, czy można lub należy użyć innych wartości.
 
 #### Odmontuj dane
 - Przejdź do "Montuj" w TWRP i odmontuj dane, jeśli są zamontowane
