@@ -1,6 +1,6 @@
 <img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
 
-# Запуск Winows на Xiaomi Mi 8
+# Запуск Windows на DEVICENAME
 
 ## Удаление
 
@@ -12,7 +12,7 @@ If you want to relock your bootloader you'll need your partition table to be sto
 ### Требования
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [gpt_both0.bin](https://github.com/n00b69/woa-dipper/releases/download/Files/gpt_both0.bin)
+- [gpt_both0.bin](https://github.com/n00b69/woa-DEVICENAME/releases/download/Files/gpt_both0.bin)
 
 ### Загрузитесь в fastboot 
 > Удерживайте нажатой кнопку уменьшения громкости + включения, пока телефон выключен, или выполните следующую команду когда он загружен 
@@ -21,7 +21,7 @@ adb reboot bootloader
 ```
 
 #### Восстановите GPT
-> Замните ```путь\к\gpt_both0.bin``` с указанием пути к файлу gpt_both 0.bin.
+> Замните ```путь\к\gpt_both0.bin``` действительным путём к файлу gpt_both 0.bin.
 
 ```cmd
 fastboot flash partition:0 путь\к\gpt_both0.bin
