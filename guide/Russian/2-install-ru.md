@@ -1,23 +1,25 @@
 <img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
 
-# Запуск Winows на DEVICENAME
+# Запуск Windows на DEVICENAME
 
 ## Установка Windows
 
 ### Требования
-- [ARM образ Windows](https://worproject.com/esd)
+- [Образ ARM Windows](https://worproject.com/esd)
   
-- [Драйвера]() FILE NEEDED
-  
-- [Образ UEFI]() FILE NEEDED
+- [Драйвера](https://github.com/n00b69/woa-DEVICENAME/releases/tag/Drivers)
 
-### Загрузка в UEFI
-> Замените **<путь\к\DEVICENAME-uefi.img>** с актуальным путём к образу UEFI
+- [Devcfg исправления touch](https://github.com/n00b69/woa-DEVICENAME/releases/download/Files/devcfg-polaris.img)
+  
+- [Образ UEFI](https://github.com/n00b69/woa-DEVICENAME/releases/tag/UEFI)
+
+### Загрузитесь в UEFI
+> Замените **<путь\к\DEVICENAME-uefi.img>** актуальным путём к образу UEFI
 ```cmd
 fastboot boot <путь\к\DEVICENAME-uefi.img>
 ```
 
-#### Включение режима mass storage
+#### Включите режим mass storage
 > После загрузки в UEFI используйте кнопки регулировки громкости для навигации по меню и кнопку питания для подтверждения
 - Выберите **UEFI Boot Menu**.
 - Выберите **USB Attached SCSI (UAS) Storage**.
@@ -25,7 +27,7 @@ fastboot boot <путь\к\DEVICENAME-uefi.img>
 
 ### Diskpart
 > [!WARNING]
-> НЕ УДАЛЯЙТЕ, НЕ СОЗДАВАЙТЕ И НЕ ИЗМЕНЯЙТЕ КАКИМ-ЛИБО ИНЫМ ОБРАЗОМ РАЗДЕЛЫ, НАХОДЯСЬ В DISKPART!!!! ЭТО МОЖЕТ ПРИВЕСТИ К УДАЛЕНИЮ UFS ИЛИ НЕВОЗМОЖНОСТИ ЗАГРУЗКИ В FASTBOOT!!!! ЭТО ОЗНАЧАЕТ, ЧТО ВАШЕ УСТРОЙСТВО БУДЕТ ОКИРПИЧЕНО БЕЗ КАКОГО-ЛИБО РЕШЕНИЯ! (за исключением доставки устройства в Xiaomi или его перепрошивки с помощью EDL, и то, и другое, скорее всего, будет стоить денег)
+> НЕ УДАЛЯЙТЕ, НЕ СОЗДАВАЙТЕ И НЕ ИЗМЕНЯЙТЕ КАКИМ-ЛИБО ИНЫМ ОБРАЗОМ РАЗДЕЛЫ, НАХОДЯСЬ В DISKPART!!! ЭТО МОЖЕТ ПРИВЕСТИ К УДАЛЕНИЮ UFS ИЛИ НЕВОЗМОЖНОСТИ ЗАГРУЗКИ В FASTBOOT!!! ЭТО ОЗНАЧАЕТ, ЧТО ВАШЕ УСТРОЙСТВО БУДЕТ ОКИРПИЧЕНО БЕЗ КАКОГО-ЛИБО РЕШЕНИЯ! (за исключением доставки устройства в Xiaomi или его перепрошивки с помощью EDL, и то, и другое, скорее всего, будет стоить денег)
 ```cmd
 diskpart
 ```
@@ -49,14 +51,14 @@ lis par
 ```
 
 #### Выбрать раздел Windows 
-> Замените `$` номером раздела Windows (должен быть XX)
+> Замените `$` номером раздела Windows (должен быть 23)
 ```cmd
 sel par $
 ```
 
 #### Отформатировать раздел Windows
 ```cmd
-format quick fs=ntfs label="WIN"
+format quick fs=ntfs label="WINDEVICENAME"
 ```
 
 #### Добавить букву к разделу Windows
@@ -65,14 +67,14 @@ assign letter X
 ```
 
 #### Выбhfnm раздел ESP
-> Замените `$` номером раздела ESP (должен быть XX)
+> Замените `$` номером раздела ESP (должен быть 22)
 ```cmd
 sel par $
 ```
 
 #### Отформатировать раздел ESP
 ```cmd
-format quick fs=fat32 label="ESP"
+format quick fs=fat32 label="ESPDEVICENAME"
 ```
 
 #### Добавьте букву к ESP
@@ -86,7 +88,7 @@ exit
 ```
 
 ### Установка Windows
-> Замените `<путь\к\install.esd>` актуальным путём к install.esd (он также может называться install.wim)
+> Замените `<путь\к\install.esd>` актуальным путём к install.esd (файл также может называться install.wim)
 ```cmd
 dism /apply-image /ImageFile:<путь\к\install.esd> /index:6 /ApplyDir:X:\
 ```
@@ -94,62 +96,67 @@ dism /apply-image /ImageFile:<путь\к\install.esd> /index:6 /ApplyDir:X:\
 > Если вы получите `Error 87`, проверьте индекс вышего образа используя `dism /get-imageinfo /ImageFile:<путь\к\install.esd>`, затем замените `index:6` действтельным индексом Windows 11 Pro в вашем образе
 
 ### Установка драйверов
-> Извлеките папку с драйверами из архива, затем выполните следующую команду, заменяя `<path\to\drivers>` путём к папке с драйверами
-```cmd
-dism /image:X:\ /add-driver /driver:<path\to\drivers> /recurse
-```
+> Распакуйте пакет драйверов, затем откройте файл `OfflineUpdater.cmd` 
+
+> Введите букву диска **WINDEVICENAME** (должна быть **X**) затем нажмите Enter
   
 #### Создать файлы загрузчика Windows
 ```cmd
 bcdboot X:\Windows /s Y: /f UEFI
 ```
 
-#### Включение тестовой подписи
+#### Включение тестовой подпись
 ```cmd
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
 ```
 
-#### Выключение восстановления 
+#### Отключите восстановление
 ```cmd
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
 ```
 
-#### Отключение проверки целостности
+#### Отключите проверку целостности
 ```cmd
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
 ```
 
-### Отвязать буквы дисков
+### Отвяжите буквы дисков
 > Чтобы они не остались после отключения устройства
 ```cmd
 diskpart
 ```
 
-#### Выбрать раздел Windows телефона
-> Используйте `list volume` чтобы найти его, замените `$` номером **WIN**
-```diskpart
+#### Выберите раздел Windows телефона
+> Используйте `list volume` чтобы найти его, замените `$` номером раздела **WINDEVICENAME**
+```cmd
 select volume $
 ```
 
-#### Отвязать букву X
-```diskpart
+#### Отвяжите букву X
+```cmd
 remove letter x
 ```
 
-#### Выбрать раздел ESP телефна
-> Используйте `list volume` чтобы найти его, замените `$` номером **ESP**
-```diskpart
+#### Выберите раздел ESP телефна
+> Используйте `list volume` чтобы найти его, замените `$` номером раздела **ESPDEVICENAME**
+```cmd
 select volume $
 ```
 
-#### Отвязать букву Y
-```diskpart
+#### Отвяжите букву Y
+```cmd
 remove letter y
 ```
 
-#### Выйти из diskpart
-```diskpart
+#### Выйдите из diskpart
+```cmd
 exit
+```
+
+### Исправить touch
+> Перезагрузитесь в fastboot, затем замените **path\to** путём к образу
+```cmd
+fastboot flash devcfg_ab path\to\devcgf-DEVICENAME.img
 ```
 
 ### Перезагрузка в Android
