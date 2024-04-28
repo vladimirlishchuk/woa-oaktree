@@ -9,7 +9,7 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [TWRP]() FILE NEEDED
+- [TWRP](https://github.com/n00b69/woa-DEVICENAME/releases/download/Files/twrp.img)
 
 ### Запустите TWRP
 > Если ваше recovery было заменено на стандартное, прошейте его ещё раз в fastboot с помощью:
