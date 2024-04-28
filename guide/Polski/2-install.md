@@ -1,6 +1,6 @@
 <img align="right" src="https://github.com/n00b69/woa-equuleus/blob/main/equuleus.png" width="350" alt="Windows 11 running on equuleus">
 
-# Windows na Xiaomi Mi 8 Pro
+# Windows na DEVICENAME
 
 ## Instalacja Windowsa
 
