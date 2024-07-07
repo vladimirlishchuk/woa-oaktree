@@ -11,12 +11,12 @@
 
 - [Devcfg (naprawia dotyk)](https://github.com/n00b69/woa-DEVICENAME/releases/download/Files/devcfg-polaris.img)
   
-- [obraz UEFI](https://github.com/n00b69/woa-DEVICENAME/releases/tag/UEFI)
+- [Obraz UEFI](https://github.com/n00b69/woa-DEVICENAME/releases/tag/UEFI)
 
 ### Uruchom do UEFI
-> Zastąp **<path\to\DEVICENAME-uefi.img>** rzeczywistą ścieżką obrazu UEFI
+> Zastąp `path\to\DEVICENAME-uefi.img` rzeczywistą ścieżką obrazu UEFI
 ```cmd
-fastboot boot <path\to\DEVICENAME-uefi.img>
+fastboot boot path\to\DEVICENAME-uefi.img
 ```
 
 #### Włączanie trybu pamięci masowej
