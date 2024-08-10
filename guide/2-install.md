@@ -9,7 +9,7 @@
   
 - [Drivers]() FILE NEEDED
   
-- [Msc script]() FILE NEEDED
+- [Msc script](https://github.com/n00b69/woa-perseus/releases/download/Files/msc.sh)
   
 - [TWRP]() FILE NEEDED (should already be installed)
 
