@@ -32,57 +32,29 @@ fastboot boot path\to\DEVICENAME-uefi.img
 diskpart
 ```
 
-#### Znajdowanie telefonu
-> Spowoduje to wyświetlenie listy wszystkich podłączonych dysków
-```cmd
-lis dis
+#### Wybieranie partycji Windows
+> Wpisz `list Volume`, aby ją znaleźć, zamień `$` na rzeczywistą liczbę **WINDEVICE**
+```diskpart
+select volume $
 ```
 
-#### Wybieranie telefonu
-> Zastąp $ rzeczywistym numerem partycji telefonu (powinien być ostatnim)
-```cmd
-sel dis $
-```
-
-#### Lista partycji Twojego telefonu
-> Spowoduje to wyświetlenie listy partycji urządzenia
-```cmd
-lis par
-```
-
-#### Wybór partycji Windows
-> Zastąp $ numerem partycji systemu Windows (powinno być 23)
-```cmd
-sel par $
-```
-
-#### Formatowanie dysku z systemem Windows
-```cmd
-format quick fs=ntfs label="WINDEVICENAME"
-```
-
-#### Dodaj literę do systemu Windows
+#### Dodanie litery do systemu Windows
 ```cmd
 assign letter x
 ```
 
-#### Wybieranie Partycji ESP
-> Zamień $ na numer partycji ESP (powinno być 22)
-```cmd
-sel par $
+#### Wybieranie partycji ESP
+> Użyj `list Volume`, aby go znaleźć, zamień `$` na rzeczywistą liczbę **ESPDEVICE**
+```diskpart
+select volume $
 ```
 
-#### Formatowanie ESP
-```cmd
-format quick fs=fat32 label="ESPDEVICENAME"
-```
-
-#### Dodaj literę do ESP
+#### Dodanie literę do ESP
 ```cmd
 assign letter y
 ```
 
-#### Wyjdź z Diskpart
+#### Wyjście z Diskpart
 ```cmd
 exit
 ```
