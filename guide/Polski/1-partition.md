@@ -107,7 +107,7 @@ quit
 
 ### Formatowanie dysku z systemem Windows
 ```cmd
-adb shell mkfs.ntfs -f /dev/block/by-name/win -n WINDEVICE
+adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINDEVICE
 ``` 
 
 ### Formatowanie dysku z systemem ESP
