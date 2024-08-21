@@ -107,7 +107,7 @@ quit
 
 ### Отформатировать раздел Windows
 ```cmd
-adb shell mkfs.ntfs -f /dev/block/by-name/win -n WINDEVICE
+adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINDEVICE
 ``` 
 
 ### Отформатировать раздел ESP
