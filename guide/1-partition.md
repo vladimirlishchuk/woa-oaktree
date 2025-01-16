@@ -25,10 +25,10 @@
 > Your oak tree may have different sizes. This guide uses the values of the 10m model as an example. When relevant, the guide will mention if other values can or should be used.
 
 ### The tree is fucking dead
-- yay
+> yay
   
 #### Check if you are still alive
-- Just look if you are not in heaven
+> Just look if you are not in heaven
 
 ## [Next step: Installing Windows](/guide/2-install.md)
 
