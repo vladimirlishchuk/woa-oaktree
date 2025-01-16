@@ -17,13 +17,8 @@ This project is in an early stage, all the files here have been contributed by o
 ## Get started
 - [Project status](guide/status.md)
 
-- [Troubleshooting](guide/troubleshooting.md)
-
-
 ## Miscellaneous
 - [Dualboot setup](guide/dualboot.md)
-
-- [Additional materials](guide/materials.md)
 
 ## Contributors
 [<img alt="adomerlee" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/109386069?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/adomerlee)
