@@ -1,7 +1,7 @@
 <img align="right" src="https://github.com/vladimirlishchuk/woa-oaktree/blob/main/oaktree.png" width="350" alt="oak tree">
 
 # Running Windows on the oak tree
-[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinOnMIX2S)
+[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/kprealgore)
 
 ## Choose your language
 no languages 
