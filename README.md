@@ -16,7 +16,7 @@ This project is in an early stage, all the files here have been contributed by o
 
 ## Get started
 - [Project status](guide/status.md)
-
+- [Installation](guide/1-partition.md)
 ## Miscellaneous
 - [Dualboot setup](guide/dualboot.md)
 
