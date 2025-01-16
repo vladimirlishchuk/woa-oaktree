@@ -7,7 +7,7 @@
 ### Prerequisites
 - A brain (most important of all)
 
-- No brain (the shit above doesn't matter
+- Brain death (the shit above doesn't matter
 
 - Axe
 
