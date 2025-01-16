@@ -6,7 +6,7 @@
 
 ### Prerequisites
 
-No dualboot on the oak tree
+> No dualboot on the oak tree sorry
   
 ## Finished!
 
