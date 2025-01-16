@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/n00b69/woa-enchilada/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
+<img align="right" src="https://github.com/vladimirlishchuk/woa-oaktree/blob/main/oaktree.png" width="350" alt="oak tree">
 
 # Running Windows on the oak tree
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinOnMIX2S)
